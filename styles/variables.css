@@ -1,1 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --font-weight-normal: 400;
+    --font-weight-bold: 785;
+    --text-color: #000;
+    --bg-color: #FFF;
+    --grad-color-start: #E7E7E7;
+    --grad-color-end: #1A1A1A;
+    --grad-color-stripe: #d3d3d3;
+    --button-text-color: #FFF;
+    --theme-contour-color: var(--text-color);
+    --heart-color: #FF0000;
+    
+}

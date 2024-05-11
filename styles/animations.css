@@ -12,3 +12,107 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+@keyframes arrow-nav {
+    from {
+      left: -13px;
+    }
+    to {
+      left: -9px;
+    }
+}
+
+.like-icon {
+    cursor: pointer;
+}
+  
+
+  
+
+
+/* hover */ 
+
+.like-icon .core {
+    fill: var(--bg-color);
+}
+
+.like-icon .main-body {
+    fill: var(--bg-color);
+}
+
+.like-icon:hover .core {
+    fill: var(--theme-contour-color);
+    transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+    fill: var(--theme-contour-color);
+    transition: fill 0.3s linear 0.05s; 
+} 
+  
+/* active */
+.like-icon:active .core {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear;
+}
+  
+.like-icon:active .main-body {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear 0.05s;
+}
+
+/* clicked */
+
+.like-icon.is-liked .core {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+    fill: var(--heart-color);
+    transition: fill 0.3s linear 0.06s;
+}
+
+.sparks {
+    opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+    animation-name: sparks-active;
+    animation-duration: 0.3s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes sparks-active {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+.like-icon.is-liked {
+    animation: heart-size 0.3s ease-in 0.1s alternate;
+}
+
+@keyframes heart-size {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5)
+    }
+}
