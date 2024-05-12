@@ -37,19 +37,19 @@
   align-items: center;
   padding: 135px 0 23px;
   margin: 100px auto ;
-  max-width: 700px;
+  max-inline-size: 700px;
   border: 2px solid var(--text-color);
 }
 
 
 .logo__header {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Press Start 2P', fantasy;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   padding-block-end: 20px;
 }
 
 .title__header {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Press Start 2P', fantasy;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   padding-block-end: 23px;
   text-transform: uppercase;
@@ -59,7 +59,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Press Start 2P', fantasy;
   font-size: 14px;
   text-transform: uppercase;
   position: relative;
@@ -69,14 +69,14 @@
 .theme-menu__button::after {
   content: '';
   display: block;
-  width: 0%;
-  height: 2px;
+  inline-size: 0%;
+  block-size: 2px;
   background-color: var(--text-color);
-  transition: width 0.3s;
+  transition: inline-size 0.3s;
 }
 
 .theme-menu__button:focus-visible::after {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .theme-menu__button:focus-visible {
@@ -100,8 +100,8 @@
 
 .theme-menu__button:disabled::before {
   content: '▶';
-  width: 14px;
-  height: 14px;
+  inline-size: 14px;
+  block-size: 14px;
   position: absolute;
   left: -13px;
   bottom: 4px;
@@ -112,11 +112,11 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-left: 17px;
+  margin-inline-start: 17px;
 }
 
 .card {
-  max-width: 700px;
+  max-inline-size: 700px;
   margin: 0 auto;
   background-color: var(--bg-color);
   border: 2px solid var(--text-color);
@@ -130,8 +130,8 @@
 }
 
 .image__card {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -140,14 +140,13 @@
 
 .container__image {
   position: relative;
-  border-bottom: 2px solid var(--text-color);
-  border-top: 2px solid var(--text-color);
+  border-block: 2px solid var(--text-color);
   overflow: hidden; /* for a blur filter*/
 }
 
 .on-image__text {
   position: absolute;
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Press Start 2P', fantasy;
   font-size: 14px;
   top: 25px;
   right: 25px;
@@ -209,8 +208,8 @@
 .button::after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   background-color: var(--text-color);
   transform: translateX(-100%);
   left: 0;
@@ -225,18 +224,13 @@
 .card__like-button {
   min-inline-size: 130px;
   block-size: 38px;
-  cursor: pointer;
   transition: box-shadow 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .button__text {
   color: var(--button-text-color);
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: 'Press Start 2P', fantasy;
   font-size: 14px;
-  line-height: 0.9;
   position: relative;
   z-index: 1;
   mix-blend-mode: difference;
@@ -253,8 +247,8 @@
 .save__button {
   margin: 0 auto 103px;
   padding: 15px 0;
-  width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
-  min-height: 55px;
+  inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  min-block-size: 55px;
 }
 
 .floppy__save {
@@ -266,13 +260,13 @@
 .dialog {
   background-color: var(--bg-color);
   border: 2px solid var(--text-color);
-  width: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
   padding: 30px;
   position: fixed;
   inset: 0;
   transition: opacity 0.3s ease-in-out;
   display: grid;
-  height: clamp(12.1875rem, 12.2315rem + -0.1878vw, 12.0625rem);
+  block-size: clamp(12.1875rem, 12.2315rem + -0.1878vw, 12.0625rem);
 }
 
 .dialog::backdrop {
@@ -291,8 +285,8 @@
 }
 
 .floppy__dialog {
-  height: 39px;
-  width: auto;
+  block-size: 39px;
+  inline-size: auto;
   align-self: center;
   mix-blend-mode: difference;
 }
@@ -303,8 +297,8 @@
 }
 
 .button__dialog {
-  width: 100%;
-  height: 38px;
+  inline-size: 100%;
+  block-size: 38px;
 }
 
 .button-dialog__text {
@@ -349,7 +343,7 @@
 
 @media (width <= 375px) {
   .card {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .save__button {
@@ -360,8 +354,8 @@
   }
 
   .floppy__save {
-    height: 28px;
-    width: auto;
+    block-size: 28px;
+    inline-size: auto;
     margin-inline-start: 8px;
   }
 
