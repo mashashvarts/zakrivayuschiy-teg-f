@@ -10,5 +10,6 @@
     --button-text-color: #FFF;
     --theme-contour-color: var(--text-color);
     --heart-color: #FF0000;
-    
+    --accent-font: 'Press Start 2P';
+    --main-font: 'Inter';
 }
